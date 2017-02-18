@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2895BA2-6C0C-44DD-A93A-49539BF367DD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BatteryAlert</RootNamespace>
+    <AssemblyName>BatteryAlert</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Royal\Desktop\dd\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5872565CEE0AE2E8136E3FA7842CA04AFCD31F98</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>BatteryAlert_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Iconsmind-Outline-Plug-In.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FileUtils.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="BatteryAlert_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Iconsmind-Outline-Plug-In.ico" />
+    <Content Include="sounds\Adara.mp3" />
+    <Content Include="sounds\Aldebaran.mp3" />
+    <Content Include="sounds\Altair.mp3" />
+    <Content Include="sounds\Alya.mp3" />
+    <Content Include="sounds\Antares.mp3" />
+    <Content Include="sounds\Antimony.mp3" />
+    <Content Include="sounds\Arcturus.mp3" />
+    <Content Include="sounds\Argon.mp3" />
+    <Content Include="sounds\Ariel.mp3" />
+    <Content Include="sounds\Beat_Box_Android.mp3" />
+    <Content Include="sounds\Bellatrix.mp3" />
+    <Content Include="sounds\Beryllium.mp3" />
+    <Content Include="sounds\Betelgeuse.mp3" />
+    <Content Include="sounds\CaffeineSnake.mp3" />
+    <Content Include="sounds\Canopus.mp3" />
+    <Content Include="sounds\Capella.mp3" />
+    <Content Include="sounds\Carme.mp3" />
+    <Content Include="sounds\Castor.mp3" />
+    <Content Include="sounds\Ceres.mp3" />
+    <Content Include="sounds\CetiAlpha.mp3" />
+    <Content Include="sounds\Cobalt.mp3" />
+    <Content Include="sounds\Cricket.mp3" />
+    <Content Include="sounds\CyanDoink.mp3" />
+    <Content Include="sounds\CyanMail.mp3" />
+    <Content Include="sounds\CyanMessage.mp3" />
+    <Content Include="sounds\DearDeer.mp3" />
+    <Content Include="sounds\Deneb.mp3" />
+    <Content Include="sounds\Doink.mp3" />
+    <Content Include="sounds\DontPanic.mp3" />
+    <Content Include="sounds\Drip.mp3" />
+    <Content Include="sounds\Elara.mp3" />
+    <Content Include="sounds\Electra.mp3" />
+    <Content Include="sounds\Europa.mp3" />
+    <Content Include="sounds\F1_New_SMS.mp3" />
+    <Content Include="sounds\Fluorine.mp3" />
+    <Content Include="sounds\Fomalhaut.mp3" />
+    <Content Include="sounds\Gallium.mp3" />
+    <Content Include="sounds\Heaven.mp3" />
+    <Content Include="sounds\Helium.mp3" />
+    <Content Include="sounds\Highwire.mp3" />
+    <Content Include="sounds\Hojus.mp3" />
+    <Content Include="sounds\Iapetus.mp3" />
+    <Content Include="sounds\Io.mp3" />
+    <Content Include="sounds\Iridium.mp3" />
+    <Content Include="sounds\Krypton.mp3" />
+    <Content Include="sounds\KzurbSonar.mp3" />
+    <Content Include="sounds\Laser.mp3" />
+    <Content Include="sounds\Merope.mp3" />
+    <Content Include="sounds\Mira.mp3" />
+    <Content Include="sounds\moonbeam.mp3" />
+    <Content Include="sounds\Naughty.mp3" />
+    <Content Include="sounds\OnTheHunt.mp3" />
+    <Content Include="sounds\Palladium.mp3" />
+    <Content Include="sounds\pixiedust.mp3" />
+    <Content Include="sounds\pizzicato.mp3" />
+    <Content Include="sounds\Plastic_Pipe.mp3" />
+    <Content Include="sounds\Polaris.mp3" />
+    <Content Include="sounds\Pollux.mp3" />
+    <Content Include="sounds\Pong.mp3" />
+    <Content Include="sounds\Procyon.mp3" />
+    <Content Include="sounds\Proxima.mp3" />
+    <Content Include="sounds\Radon.mp3" />
+    <Content Include="sounds\Rang.mp3" />
+    <Content Include="sounds\regulus.mp3" />
+    <Content Include="sounds\Rhea.mp3" />
+    <Content Include="sounds\Rubidium.mp3" />
+    <Content Include="sounds\Salacia.mp3" />
+    <Content Include="sounds\Selenium.mp3" />
+    <Content Include="sounds\Shaula.mp3" />
+    <Content Include="sounds\sirius.mp3" />
+    <Content Include="sounds\Sirrah.mp3" />
+    <Content Include="sounds\Spica.mp3" />
+    <Content Include="sounds\Stone.mp3" />
+    <Content Include="sounds\Strontium.mp3" />
+    <Content Include="sounds\Syrma.mp3" />
+    <Content Include="sounds\TaDa.mp3" />
+    <Content Include="sounds\Talitha.mp3" />
+    <Content Include="sounds\Tethys.mp3" />
+    <Content Include="sounds\Thallium.mp3" />
+    <Content Include="sounds\Titan.mp3" />
+    <Content Include="sounds\tweeters.mp3" />
+    <Content Include="sounds\Upsilon.mp3" />
+    <Content Include="sounds\Vega.mp3" />
+    <Content Include="sounds\Voila.mp3" />
+    <Content Include="sounds\Xenon.mp3" />
+    <Content Include="sounds\Zirconium.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
